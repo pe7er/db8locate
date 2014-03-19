@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form type="browse"
+      show_header="1"
+      show_filters="1"
+      show_pagination="1"
+      norows_placeholder="COM_DB8LOCATE_COMMON_NORECORDS">
+    
+    <headerset>
+        <header name="db8locate_item_id" type="rowselect" tdwidth="20" />
+        <header name="title" type="fieldsearchable" sortable="true" buttons="yes" buttonclass="btn" />
+        <header name="enabled" type="published" sortable="true" tdwidth="8%" />
+        <header name="ordering" type="ordering" sortable="true" tdwidth="10%" />
+        <header name="ordering" type="ordering" sortable="true" tdwidth="10%" />    
+    </headerset>
+
+    <fieldset name="items">
+        <field name="db8locate_item_id" show_id="true" type="selectrow"/>
+        <field name="title" type="text" show_link="true" url="index.php?option=com_db8locate&amp;view=item&amp;id=[ITEM:ID]" empty_replacement="(no title)" />
+        <field name="enabled" type="published"/>
+        <field name="ordering" type="ordering" labelclass="order"/>
+        <field name="catid" type="sql" translate="false" query="SELECT * FROM #__categories" key_field="id" value_field="title" />
+    </fieldset>
+
+</form>

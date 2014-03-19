@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form validate="true" serverside_validate="true">
+
+    <fieldset name="basic_configuration"
+              label="COM_DB8LOCATE_LOCATION_ITEM_EDIT"
+              description="COM_DB8LOCATE_LOCATION_ITEM_EDIT_BASIC_DESC"
+              class="span4">
+        
+        <field name="title" type="text"
+               class="inputbox"
+               label="JGLOBAL_TITLE"
+               required="true"
+               Size="50" />
+
+        <field name="enabled" type="list" label="JSTATUS"
+        labelclass="todo-label"
+        class="inputbox"
+        filter="intval" size="1" default="1" >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        
+        <field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+               class="inputbox" size="6"
+               default="0" />                                                                
+
+        <field name="catid" type="category"
+               extension="com_db8locate"
+               class="inputbox"
+               label="JCATEGORY"
+               required="true"
+               size="1" />	
+                
+    </fieldset>
+</form>

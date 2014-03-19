@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="component" method="upgrade">
+    <name>db8 locate</name>
+    <author>Peter Martin</author>
+    <creationDate>23 March 2014</creationDate>
+    <copyright>Copyright (C) 2014 Peter Martin / db8.nl</copyright>
+    <license>GNU General Public License version 2</license>
+    <authorEmail>joomla@db8.nl</authorEmail> 
+    <version>1.0.2</version>
+    <description>Component to manage and display locations on a Google Map</description>
+
+    <!-- SQL query files to execute on installation -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+            <file driver="mysql">sql/install/mysql/install.sql</file>
+
+            <file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+            <file driver="mysqli">sql/install/mysql/install.sql</file>
+        </sql>
+    </install>
+
+    
+    <!-- Administrator back-end section -->
+    <administration>
+        <!-- Administration menu -->
+        <menu view="cpanel">COM_DB8LOCATE</menu>
+
+        <!-- Back-end files -->
+        <files folder="backend">
+            <folder>sql</folder>
+
+            <filename>db8locate.php</filename>
+            <filename>fof.xml</filename>
+        </files>
+
+    </administration>
+
+</extension>
