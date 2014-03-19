@@ -9,5 +9,4 @@ http://joomladagen.nl/2014/programma/presentaties/joomla-3x-rad
 
 Greetings,
 Peter Martin
-@pe7er
 www.db8.nl
