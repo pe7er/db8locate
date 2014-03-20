@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="component" method="upgrade">
-    <name>db8 locate</name>
+    <name>COM_DB8LOCATE</name>
     <author>Peter Martin</author>
     <creationDate>23 March 2014</creationDate>
     <copyright>Copyright (C) 2014 Peter Martin / db8.nl</copyright>
     <license>GNU General Public License version 2</license>
     <authorEmail>joomla@db8.nl</authorEmail> 
-    <version>1.0.2</version>
-    <description>Component to manage and display locations on a Google Map</description>
+    <version>1.0.3</version>
+    <description>COM_DB8LOCATE_XML_DESCRIPTION</description>
 
     <!-- SQL query files to execute on installation -->
     <install>
@@ -28,10 +28,16 @@
 
         <!-- Back-end files -->
         <files folder="backend">
+            <folder>helpers</folder>
+            <folder>language</folder>
             <folder>sql</folder>
-
+            <folder>views</folder>
+            
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
             <filename>db8locate.php</filename>
             <filename>fof.xml</filename>
+            <filename>toolbar.php</filename>
         </files>
 
     </administration>

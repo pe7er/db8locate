@@ -9,21 +9,36 @@
     <headerset>
         <header name="db8locate_item_id" type="rowselect" tdwidth="20" />
         <header name="title" type="fieldsearchable" sortable="true" buttons="yes" buttonclass="btn" />
-        <header name="enabled" type="published" sortable="true" tdwidth="8%" />
-        <header name="ordering" type="ordering" sortable="true" tdwidth="10%" />
+        <header name="latitude" sortable="true" tdwidth="10%" />
+        <header name="longitude" sortable="true" tdwidth="10%" />
+
         <header name="category" type="category" sortable="true" tdwidth="10%" />
+        <header name="enabled" type="published" sortable="true" tdwidth="8%" />
+        
+        <header name="access" type="accesslevel" sortable="true" tdwidth="10%" />    
+        <header name="author" type="user" sortable="true" tdwidth="10%" />
+        <header name="date" type="date" sortable="true" tdwidth="10%" />        
         <header name="language" type="language" sortable="true" tdwidth="10%" />    
-        <header name="access" type="access" sortable="true" tdwidth="10%" />    
+        <header name="ordering" type="ordering" sortable="true" tdwidth="1%" />
+        
     </headerset>
 
     <fieldset name="items">
         <field name="db8locate_item_id" show_id="true" type="selectrow"/>
         <field name="title" type="text" show_link="true" url="index.php?option=com_db8locate&amp;view=item&amp;id=[ITEM:ID]" empty_replacement="(no title)" />
-        <field name="enabled" type="published"/>
-        <field name="ordering" type="ordering" labelclass="order"/>
+        <field name="latitude" type="text" tdwidth="10%" />
+        <field name="longitude" type="text" tdwidth="10%" />
+
         <field name="catid" type="sql" translate="false" query="SELECT * FROM #__categories" key_field="id" value_field="title" />
-        <field name="language" type="text" sortable="true" tdwidth="10%" />        
-        <field name="access" type="accesslevel" sortable="true" tdwidth="10%" />        
+        <field name="enabled" type="published"/>
+
+        <field name="access" type="accesslevel" tdwidth="10%" />   
+        <field name="created_by" type="user" show_avatar="false" show_email="false" show_username="false" show_name="true" show_id="false" sortable="true" tdwidth="10%" />
+        <field name="created_on" type="date" tdwidth="10%" />
+        <field name="language" type="text" tdwidth="10%" />                    
+        <field name="ordering" type="ordering" labelclass="order"/>
+        
+        
     </fieldset>
 
 </form>

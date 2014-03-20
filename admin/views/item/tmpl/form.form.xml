@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @package	db8 locate
+    @author	Peter Martin
+    @copyright	Copyright (C) 2014 Peter Martin / db8.nl
+    @license	GNU General Public License version 2 or later
+
+    Items edit form file
+-->
 
 <form validate="true" serverside_validate="true">
 
@@ -13,17 +21,100 @@
                required="true"
                Size="50" />
 
-        <field name="enabled" type="list" label="JSTATUS"
-               labelclass="todo-label"
+        <field name="website" type="text"
                class="inputbox"
-               filter="intval" size="1" default="1" >
-            <option value="1">JPUBLISHED</option>
-            <option value="0">JUNPUBLISHED</option>
-        </field>
+               label="COM_DB8LOCATE_ITEM_FIELD_WEBSITE"
+               required="true"
+               size="50" />
         
-        <field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
-               class="inputbox" size="6"
-               default="0" />                                                                
+        <field name="created_by"
+               type="user"
+               label="COM_DB8LOCATE_CREATEDBY_LABEL"
+               class="inputbox" />
+
+        <field name="created_on" 
+               type="calendar" 
+               label="COM_DB8LOCATE_CREATEDON_LABEL"
+               class="inputbox" 
+               size="22"
+               format="%Y-%m-%d %H:%M:%S" 
+               filter="user_utc" />                    
+
+        <field name="modified_by"
+               type="user"
+               label="COM_DB8LOCATE_MODIFIEDBY_LABEL"
+               class="inputbox" />
+
+        <field name="modified_on" 
+               type="calendar" 
+               label="COM_DB8LOCATE_MODIFIEDON_LABEL"
+               class="inputbox" 
+               size="22"
+               format="%Y-%m-%d %H:%M:%S" 
+               filter="user_utc" />                    
+                   
+    </fieldset>
+
+    <fieldset name="address"
+              label="COM_DB8LOCATE_ADDRESS_ITEM"
+              description="COM_DB8LOCATE_ADDRESS_BASIC_DESC"
+              class="span4">
+
+
+        <field name="location" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_LOCATION"
+               required="false"
+               size="60" />	
+            
+        <field name="address" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_ADDRESS"
+               required="false"
+               size="50" />	
+            
+        <field name="postcode" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_POSTCODE"
+               required="false"
+               size="15" />	
+            
+        <field name="city" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_CITY"
+               required="true"
+               size="50" />	
+            
+        <field name="region" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_REGION"
+               required="false"
+               size="50" />	
+            
+        <field name="country" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_COUNTRY"
+               required="true"
+               size="50" />	
+        
+        <field name="latitude" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_LATITUDE"
+               required="false"
+               size="10" />
+        	
+        <field name="longitude" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_LONGITUDE"
+               required="false"
+               size="10" />
+        
+    </fieldset>
+        
+    <fieldset name="settings"
+              label="COM_DB8LOCATE_SETTINGS_ITEM"
+              description="COM_DB8LOCATE_ADDRESS_BASIC_DESC"
+              class="span4">
 
         <field name="catid" type="category"
                extension="com_db8locate"
@@ -31,12 +122,30 @@
                label="JCATEGORY"
                required="true"
                size="1" />	
+        
+        <field name="tags"
+               type="tag"
+               label="JTAG"
+               description="JTAG_DESC"
+               class="inputbox span12"
+               multiple="true"
+        >
+        </field>
 
+        <field name="enabled" type="list" label="JSTATUS"
+               labelclass="todo-label"
+               class="inputbox"
+               filter="intval" size="1" default="1" >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" size="1" />
+                
         <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" >
             <option value="*">JALL</option>
         </field>     
 
-        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" size="1" />
-                        
-    </fieldset>
+    </fieldset>                
+
 </form>
