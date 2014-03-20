@@ -14,9 +14,9 @@
                Size="50" />
 
         <field name="enabled" type="list" label="JSTATUS"
-        labelclass="todo-label"
-        class="inputbox"
-        filter="intval" size="1" default="1" >
+               labelclass="todo-label"
+               class="inputbox"
+               filter="intval" size="1" default="1" >
             <option value="1">JPUBLISHED</option>
             <option value="0">JUNPUBLISHED</option>
         </field>
@@ -31,6 +31,12 @@
                label="JCATEGORY"
                required="true"
                size="1" />	
-                
+
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" >
+            <option value="*">JALL</option>
+        </field>     
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" size="1" />
+                        
     </fieldset>
 </form>
