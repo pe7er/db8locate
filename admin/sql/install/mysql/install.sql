@@ -21,5 +21,6 @@ CREATE TABLE IF NOT EXISTS `#__db8locate_items` (
     `latitude` varchar(10) NOT NULL,
     `longitude` varchar(10) NOT NULL,
     `website` varchar(100) NOT NULL,
+    `hits` int(10) unsigned NOT NULL DEFAULT '0',
 PRIMARY KEY (`db8locate_item_id`)
 ) DEFAULT CHARSET=utf8;

@@ -20,6 +20,7 @@
         <header name="date" type="date" sortable="true" tdwidth="10%" />        
         <header name="language" type="language" sortable="true" tdwidth="10%" />    
         <header name="ordering" type="ordering" sortable="true" tdwidth="1%" />
+        <header name="hits" type="hits" sortable="true" tdwidth="1%" />
         
     </headerset>
 
@@ -37,6 +38,7 @@
         <field name="created_on" type="date" tdwidth="10%" />
         <field name="language" type="text" tdwidth="10%" />                    
         <field name="ordering" type="ordering" labelclass="order"/>
+        <field name="hits" type="hits" tdwidth="1%" />
         
         
     </fieldset>
