@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @package	db8 locate
+    @author	Peter Martin
+    @copyright	Copyright (C) 2014 Peter Martin / db8.nl
+    @license	GNU General Public License version 2 or later
+
+    Items view form file
+-->
+
+<form
+    type="browse"
+    show_header="1"
+    show_filters="0"
+    show_pagination="1"
+    show_enabled="1"
+    norows_placeholder="COM_DB8LOCATE_COMMON_NORECORDS" >
+    
+    <headerset>
+        <header name="title" 
+                type="fieldsearchable" 
+                sortable="true"
+                buttons="true" />
+
+        <header name="city" 
+                type="fieldsearchable" 
+                sortable="true"
+                buttons="false" />
+                
+        <header name="region" 
+                sortable="true"
+                buttons="false" />
+
+        <header name="country" 
+                sortable="true"
+                buttons="false" 
+                tdwidth="20%" />
+        
+        <header name="category" 
+                sortable="false"
+                buttons="false" />
+    </headerset>
+
+    <fieldset name="items">
+        <field name="title" type="text"
+               show_link="true"
+               url="index.php?option=com_db8locate&amp;view=item&amp;id=[ITEM:ID]"
+               class="todoitem"
+               empty_replacement="(no title)" />
+
+        <field name="city" type="text" />
+
+        <field name="region" type="text" />
+        <field name="country" type="text" />
+        
+        <field name="catid" type="sql" translate="false" 
+               query="SELECT * FROM #__categories"
+               key_field="id" value_field="title"/>
+
+    </fieldset>
+</form>
+

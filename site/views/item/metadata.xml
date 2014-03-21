@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @package	db8 locate
+    @author	Peter Martin
+    @copyright	Copyright (C) 2014 Peter Martin / db8.nl
+    @license	GNU General Public License version 2 or later
+
+    This file instructs Joomla to hide "db8 locate - individual item" 
+    in the list of Menu Item Types when creating a new menu item.
+
+-->
+<metadata>
+        <view hidden="true" />
+</metadata>

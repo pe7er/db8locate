@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @package	db8 locate
+    @author	Peter Martin
+    @copyright	Copyright (C) 2014 Peter Martin / db8.nl
+    @license	GNU General Public License version 2 or later
+
+    Items form file
+-->
+
+
+<form lessfiles="media://com_todo/css/frontend.less||media://com_todo/css/frontend.css"
+      type="read">
+  
+    <fieldset name="lug"
+              label="Linux User Group"
+              class="span12">
+    
+        <field name="title" type="text"
+               label=""
+               class="todo-title-field"
+               size="50" />
+    </fieldset>
+
+            
+    <fieldset name="about"
+              label="About This Group"
+
+              class="span6">
+        
+        <field name="description" type="text" />
+    
+    </fieldset>
+
+        
+    <fieldset name="address"
+              label="Address"
+              class="span6">
+        
+        <field name="location" type="text"
+               size="60" />	
+            
+        <field name="address" type="text"
+               size="50" />	
+            
+        <field name="postcode" type="text"
+               size="15" />	
+            
+        <field name="city" type="text"
+               size="50" />	
+            
+        <field name="region" type="text"
+               size="50" />	
+            
+        <field name="country" type="text"
+               size="50" />	
+	
+    </fieldset>
+                                                
+    <fieldset name="meetings"
+              label="Group Meeting Information"
+              class="span6">
+        
+    </fieldset>  
+
+    
+    <fieldset name="abasic_configuration"
+              label="COM_DB8LOCATE_LOCATION_ITEM_EDIT"
+              description="COM_DB8LOCATE_LOCATION_ITEM_EDIT_BASIC_DESC"
+              class="span6">
+        
+        <field name="title" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_TITLE"
+               
+               required="true"
+               size="50" />
+        
+        <field name="slug" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_TITLE"
+               required="false"
+               size="50" />
+        
+        <field name="catid" type="category"
+               extension="com_db8locate"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_CATEGORY"
+               required="true"
+               size="1" />	
+    
+        <field name="meetings" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_MEETINGS"
+               required="false"
+               size="50" />
+            
+        <field name="website" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_WEBSITE"
+               required="true"
+               size="50" />
+            
+        <field name="enabled" type="list" label="JSTATUS"
+               labelclass="todo-label"
+               description="JFIELD_PUBLISHED_DESC" class="inputbox"
+               filter="intval" size="1" default="1" >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+            
+        <field name="latitude" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_LATITUDE"
+               required="false"
+               size="10" />	
+        <field name="longitude" type="text"
+               class="inputbox"
+               label="COM_DB8LOCATE_ITEM_FIELD_LONGITUDE"
+               required="false"
+               size="10" />            
+    </fieldset>
+
+                                
+        
+    <fieldset name="description_group"
+              label="COM_DB8LOCATE_ITEMS_GROUP_DESCRIPTION"
+              description="COM_DB8LOCATE_ITEMS_GROUP_DESCRIPTION_DESC"
+              class="span8">
+        
+    </fieldset>
+</form>
