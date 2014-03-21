@@ -6,8 +6,17 @@
     <copyright>Copyright (C) 2014 Peter Martin / db8.nl</copyright>
     <license>GNU General Public License version 2</license>
     <authorEmail>joomla@db8.nl</authorEmail> 
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <description>COM_DB8LOCATE_XML_DESCRIPTION</description>
+
+    <!-- Public front end files -->
+    <files folder="frontend">
+        <folder>assets</folder>
+        <folder>language</folder>
+        <folder>views</folder>
+        <filename>db8locate.php</filename>
+        <filename>toolbar.php</filename>
+    </files>
 
     <!-- SQL query files to execute on installation -->
     <install>
@@ -41,5 +50,10 @@
         </files>
 
     </administration>
+    
+    <!-- Update servers -->
+    <updateservers>
+        <server type="extension" priority="1" name="com_db8locate">http://www.db8.nl/updates/com_db8locate.xml</server>
+    </updateservers>
 
 </extension>
