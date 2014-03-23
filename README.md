@@ -7,6 +7,8 @@ Joomla 3.2 Component to manage and display locations on a Google Map. The compon
 It's an example component for my presentation "Joomla 3 Component programmeren met RAD" (in Dutch) for Joomladagen 2014
 http://joomladagen.nl/2014/programma/presentaties/joomla-3x-rad
 
+Sheets (in Dutch) are available at Slideshare: http://www.slideshare.net/pe7er/jdnl14-component-programmerenrad
+
 Greetings,
 Peter Martin
 www.db8.nl
